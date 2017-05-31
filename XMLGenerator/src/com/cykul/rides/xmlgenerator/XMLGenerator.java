@@ -43,6 +43,16 @@ public class XMLGenerator {
 		organization.setTextContent("Learnasium");
 		rootElement.appendChild(organization);
 		
+		Element numberOfRiders = dom.createElement("numberOfRiders");
+		numberOfRiders.setTextContent("4");
+		rootElement.appendChild(numberOfRiders);
+		
+		Element riderFee = dom.createElement("riderFee");
+		riderFee.setTextContent("1500");
+		rootElement.appendChild(riderFee);
+		
+		dom.appendChild(rootElement);
+		
 		TransformerFactory transformerFactory = TransformerFactory.newInstance();
 		
 		Transformer transformer = transformerFactory.newTransformer();
