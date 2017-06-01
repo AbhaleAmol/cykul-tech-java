@@ -36,7 +36,16 @@ public class XMLGenerator {
 		rootElement.appendChild(emailID);
 		
 		Element mobileNumber = dom.createElement("mobileNumber");
-		mobileNumber.setTextContent("8143495180");
+		
+			Element firstNumber = dom.createElement("one");
+			firstNumber.setTextContent("8143495180");
+			mobileNumber.appendChild(firstNumber);
+			
+			Element secondNumber = dom.createElement("two");
+			secondNumber.setTextContent("9700152634");
+			mobileNumber.appendChild(secondNumber);
+			
+		
 		rootElement.appendChild(mobileNumber);
 		
 		Element organization = dom.createElement("organization");
